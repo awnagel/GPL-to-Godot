@@ -115,7 +115,7 @@ def main():
                 create_images(results[0], results[1], int(sys.argv[3]))
                 return
             elif sys.argv[1] == "-g" and len(sys.argv) == 3:
-                print("Creating godot poolcolorarray...")
+                print("Creating godot PoolColorArray...")
                 print(create_godot_palette(results[0]))
                 return
             elif sys.argv[1] == "-f" and len(sys.argv) == 3:
@@ -147,7 +147,7 @@ def main():
                 print("-i --Creates image textures, requires PILLOW.")
                 print("-g -- Prints poolcolorarray for godot project_metadata.cfg.")
                 print("-f -- Exports poolcolorarray for godot project_metadata.cfg to text file.")
-                print("-m -- Replaces color picker poolcolorarray in godot project.")
+                print("-m -- Replaces color picker PoolColorArray in godot project.")
                 return
     print("Invalid command, use --help")
     
