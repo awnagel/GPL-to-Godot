@@ -45,8 +45,8 @@ def clamp(x):
 
 def create_image(color, name, image_size):
     r = int(color[0])
-    b = int(color[1])
-    g = int(color[2])
+    b = int(color[2])
+    g = int(color[1])
     if name.lower() == "untitled":
         name = "#{0:02x}{1:02x}{2:02x}".format(clamp(r), clamp(g), clamp(b))
     img = Image.new('RGB', (image_size, image_size), color=(r, g, b))
@@ -76,7 +76,6 @@ def save_config_godot_linux(results, argument):
         for dirs in os.listdir(godot_dir):
             if dirs.startswith(argument[3]):
                 filename = godot_dir + dirs + "/project_metadata.cfg"
-                print(filename)
                 lines = open(filename, 'r').read().splitlines()
                 i = 0
                 for line in lines:
@@ -94,7 +93,6 @@ def save_config_godot_windows(results, argument):
         for dirs in os.listdir(godot_dir):
             if dirs.startswith(argument[3]):
                 filename = godot_dir + dirs + "\\project_metadata.cfg"
-                print(filename)
                 lines = open(filename, 'r').read().splitlines()
                 i = 0
                 for line in lines:
